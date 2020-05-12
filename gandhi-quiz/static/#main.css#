@@ -1,0 +1,306 @@
+                    
+body {
+    /* overflow-y: hidden; */
+    text-align:center !important;
+    font-size: 20pt !important;
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+}
+
+#bottom {
+    min-height: 100px !important;
+}
+
+/* .l1Div { */
+/*     display: none; */
+/* } */
+
+label {
+    text-align: center !important;
+}
+
+.ui-btn {
+    /* background-color: #dedede !important; */
+    /* border-color: #999999 !important; */
+}   
+
+#enter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+#choice, #confidence {
+    display: block;
+}
+
+#loader {
+    display: none;
+    position: absolute;
+    width: 20vw;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+#header {
+    height: 40pt;
+}
+#home {
+    display: none;
+}
+#clock {
+    display: none;
+    z-index: 90;
+    position: absolute;
+    width: 16vw;
+    right: 0vw;
+    bottom: 0vh;
+    height: 8vw;
+    /* border-width: 5px; */
+    /* border-style: solid; */
+    text-align: left;
+}
+#clockTxt {
+    left: 8vw;
+    bottom: 4vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+ /* #clock { */
+/*     z-index: 90; */
+/*     display: none; */
+/*     position: absolute; */
+/*     right: 50vw; */
+/*     transform: translateX(50%); */
+/*     bottom: 0; */
+/*     border: solid; */
+/*     /\* height: 10vh; *\/ */
+/*     /\* width: 20vw; *\/ */
+/* 	border-width: 5px; */
+/* 	border-style: solid; */
+/* 	/\* min-height: 2.6875em; *\/ */
+/* 	/\* font-size: 1em; *\/ */
+/* 	/\* min-height: 1.1em; *\/ */
+/* 	text-align: center; */
+/* } */
+
+
+
+/* .choiceDiv, #chooseSeat { */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     width: 71vw; */
+/* } */
+
+/* .confidenceDiv, .magnitudeDiv { */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     width: 95vw; */
+/* } */
+
+/* /\* .choiceField .ui-radio { *\/ */
+/* /\*     width: 35vw !important; *\/ */
+/* /\*     text-align: center; *\/ */
+/* /\*     /\\* height: 5vw !important; *\\/ *\/ */
+/* /\* } *\/ */
+
+/* .choiceTable .ui-radio { */
+/*     width: 8vw !important; */
+/*     /\* width: 5vw !important;     *\/ */
+/* } */
+/* .choiceTable .ui-btn{ */
+/*     padding: 0.7em; */
+/* } */
+
+/* .five-button .ui-radio { */
+/*     width: 15vw !important; */
+/* } */
+
+/* /\* #infoDiv{ *\/ */
+/* /\*     display: inline !important; *\/ */
+/* /\* } *\/ */
+
+.choiceField .ui-btn-inner {
+    width: 49% !important;
+    height: 25vw !important;
+}
+
+/* .gapAfterSlider { */
+/*     height: 30px; */
+/* } */
+
+/* .enterField .ui-btn { */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     width: 35vw !important; */
+/*     /\* height: 25vw !important; *\/ */
+/* } */
+
+
+
+/* input { */
+/*     width: 80vw; */
+/* } */
+
+/* #magnitudeInnerDiv, #confidenceInnerDiv { */
+/*     transform: translateX(-5vw); */
+/* } */
+
+/* #magnitudeInnerDiv > input.ui-slider-input { */
+/*     width: 10vw !important; */
+/*     display : none; */
+/* } */
+/* #confidenceInnerDiv > input.ui-slider-input { */
+/*     width: 10vw !important; */
+/*     display : none; */
+/* } */
+
+
+/* .confidenceDiv input { */
+/*     width: 70vw; */
+/* } */
+/* .magnitudeInnerDiv input { */
+/*     width: 60vw; */
+/* }; */
+    
+/* div.ui-slider { */
+/*     margin: auto !important; */
+/*     width: 100% !important; */
+/* } */
+
+/* #magnitudeInnerDiv { */
+/*     transform: translateX(-5vw); */
+/* } */
+/* #magnitudeInnerDiv > input.ui-slider-input { */
+/*     width: 10vw !important; */
+/* } */
+
+/* div.ui-disabled { */
+/*     opacity: 0.85 !important; */
+/*     font-size: 100pt; */
+/* } */
+
+/* fieldset { */
+/*     font-size: 20pt !important; */
+/* } */
+
+/* span .ui-btn-text{ */
+/*     font-size: 18pt !important; */
+/* } */
+
+/* label > .ui-btn { */
+/*     height: 60px !important; */
+/*     line-height: 40px !important;     */
+/* } */
+
+/* .ui-slider-handle { */
+/*     height: 40px !important; */
+/*     top: 0% !important; */
+/*     /\* transform: translateY(-50%); *\/ */
+/* } */
+
+/* #magnitude-slider, #confidence-slider { */
+/*     display: none; */
+/* } */
+/* .ui-slider-track { */
+/*     margin: 0 15px 0 30px !important; */
+/* } */
+
+
+/* .ui-radio-on { */
+/*     background: #666 !important; */
+/* } */
+
+/* #choiceFBtext { */
+/*     font-size: .7em; */
+/* } */
+
+/* .bigImgWrapper { */
+/*     overflow: hidden; */
+/*     position: absolute; */
+/*     left: 0; */
+/*     top: 0; */
+/*     /\* top: 100vh; *\/ */
+/*     width: 100vw; */
+/*     height: 100vh; */
+/* } */
+
+/* .bigImg { */
+/*     z-index: 99;     */
+/*     position: absolute; */
+/*     left: 0; */
+/*     top: 100vh; */
+/*     background: white; */
+/*     height: 100vh; */
+/*     width: 100vw; */
+/*     -webkit-transition-property: top; */
+/*     -webkit-transition-duration: 1s; */
+/*     -webkit-transition-timing-function: ease-in-out; */
+/*     transition-property: top; */
+/*     transition-duration: 1s; */
+/*     transition-timing-function: ease-in-out;     */
+/* } */
+
+/* .bigImgImg{ */
+/*     max-height: 100vh; */
+/*     max-width: 40vw; */
+/* } */
+/* .bigImgTxt{ */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     text-align: center; */
+/*     width: 80vw; */
+/* } */
+
+/* #connectedDiv { */
+/*     font-size: 12pt !important; */
+/* } */
+
+/* #clock { */
+/*     z-index: 90; */
+/*     display: none; */
+/*     position: absolute; */
+/*     right: 50vw; */
+/*     transform: translateX(50%); */
+/*     bottom: 0; */
+/*     border: solid; */
+/*     /\* height: 10vh; *\/ */
+/*     /\* width: 20vw; *\/ */
+/* 	border-width: 5px; */
+/* 	border-style: solid; */
+/* 	/\* min-height: 2.6875em; *\/ */
+/* 	/\* font-size: 1em; *\/ */
+/* 	/\* min-height: 1.1em; *\/ */
+/* 	text-align: center; */
+/* } */
+
+/* #clockTxt { */
+/*     margin: 20px 20px 20px 20px; */
+/* } */
+
+/* #circle { */
+/*     background-color: red; */
+/* 	border-radius: 50%; */
+/* 	width: 200px; */
+/* 	height: 200px; */
+/*     transform: translateX(-50%); */
+/*     margin-left: 50%;     */
+/* 	/\* width and height can be anything, as long as they're equal *\/ */
+/* } */
+
+
+/* .flex { */
+/*     display: flex; */
+/*     transform: translateX(-50%); */
+/*     margin-left: 50%; */
+/*     width: 50vmax; */
+/* } */
+
+/* .band{ */
+/*     width: 10%; */
+/*     /\* width: 100px; *\/ */
+/*     height: 10vmin; */
+/*     background-color: red;     */
+/* } */

@@ -1,0 +1,57 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="static/libs.css" rel="stylesheet"/>
+
+  <style>
+    .instructions{
+      width: 50vw;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 20pt;
+      top: 10vh;
+      text-align: left;
+      justify-content: center;
+      font-size: 16pt;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="instructions">
+    <h1>Experiment Name</h1>
+    <p>
+      You've reached the end of the task, and you're almost finished this HIT.<br>
+    </p>
+    <p>You scored <span id="score"></span> points. Good job.
+    <p>
+      Before you go collect your reward though, we would appreciate if you could give us some feedback on the task.
+      What did you think of it? Where there any strategies you used to make your decisions? Anything else you think we should know?
+      Please write your comments in the box below, and then click send to get your reward code.
+    </p>
+
+    <!-- <textarea form ="feedback" name="feedback" id="ff_message"
+         rows="10" cols="80" wrap="soft"></textarea> -->
+    <form action="./end.php" method="post" id="feedback">
+      <div class="form-group">
+        <label for="fb">Feedback Box</label>
+        <textarea class="form-control" rows="5" id="cb" name="feedback"></textarea>
+        <input style="display: none" id="sub" name="subject_nr" type="text" value=""/>
+        <button type="submit" class="btn btn-primary my-1">Continue</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var subject_nr = localStorage['subject_nr'];
+    document.getElementById('sub').value = subject_nr;
+    var score = Number(localStorage['score']);
+    document.getElementById('score').innerHTML = score;
+    /* var bonus = score/3;
+     * document.getElementById('bonus').innerHTML = Math.round(bonus) / 100; */
+  </script>
+</body>
+</html>

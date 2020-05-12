@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <script src="/socket.io/socket.io.js"></script>         -->
+    <style>
+      body {
+        display: none;
+      }
+    </style>
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <script src="static/main.js"></script>
+  </head>
+  <body>
+
+
+    <div id="instrA" class="instructions">
+      <h1>Wheel of Chance</h1>
+      <p>Hello.</p>
+      <p>
+        In this task, you're going to play a very simple casino game.<br>
+        At the end of the game, you'll be paid $2 just for finishing,
+        plus a bonus that depends on how many points you've.
+      </p>
+      <p>
+        You start with 100 points, with each point being worth 0.5 cent of real money.
+        On each round, you'll be shown a gamble,
+        and you can either bet, and either win or lose points,
+        or pass, and win or lose nothing.
+        There will be 200 rounds in total.
+      </p>
+      <h3>Press [SPACE] (the spacebar) to go on.</h3>
+    </div>
+
+<!-- InstrB is done with JS -->
+
+    <div id="instrC0" class="instructions">
+      <h1>Wheel of Chance</h1>
+      <p>
+        The controls are simple.<br>
+        On each round, press [SPACE] within 5 seconds if you want to to take the gamble ("bet").<br>
+        Otherwise, don't press anything, and you will "pass", and not take the gamble, instead.
+      </p>
+      <h3>Press [SPACE] to go on.</h3>
+    </div>
+    <div id="instrC1" class="instructions">
+      <h1>Wheel of Chance</h1>
+      <p>
+        The controls are simple.<br>
+        On each round, press [SPACE] within 5 seconds
+        if you want to to "pass" and not take the gamble.<br>
+        If you want to take the gamble ("bet"), don't press anything.
+      </p>
+      <h3>Press [SPACE] to go on.</h3>
+    </div>
+    <div id="instrC2" class="instructions">
+      <h1>Wheel of Chance</h1>
+      <p>
+        The controls are simple.<br>
+        On each round, press the [RIGHT] arrow within 5 seconds
+        if you want to take the gamble,
+        or press the [LEFT] arrow if you want to "pass", and not take the gamble.<br>
+        If you don't press anything before time runs out,
+        you'll lose 20 points from your score. Don't do that.
+      </p>
+      <h3>Press [SPACE] to go on.</h3>
+    </div>
+
+    <div id="instrD" class="instructions">
+      <p>
+        There are just two other things you need to know.
+      </p>
+      <p>
+        First, you can pause the game by pressing [P].
+        It will pause after the current round ends.
+        There will also be a break every 20 rounds.
+      </p>
+      <p>
+        Second, do not minimize the browser window or engage in
+        another task while this game is running, unless it is paused.
+        If you record more than five rounds where the browser window
+        is not open and in focus, or pause the game for too long,
+        you will not be paid for this HIT.
+      </p>
+      <h3>Press [SPACE] to go on.</h3>
+    </div>
+
+    <div id="instrE" class="instructions">
+      <p>
+        Let's try a few practice rounds.
+      </p>
+      <p>
+        Remember, each round lasts five seconds.
+        On the practice rounds, the wheel will flash every second
+        to show you how quickly the time is passing.
+        This will not happen in the main task.
+      </p>
+      <h3>Press [SPACE] to go begin.</h3>
+    </div>
+
+    <div id="gambleWrapper">
+      <pie id="gambleStatic"> </pie>
+      <pie id="gambleTimer"> </pie>
+      <p id="win" class="quant"> +20</p>
+      <p id="lose" class="quant">-10</p>
+    </div>
+
+    <div class="stim" id="score">
+      <p> <span id="current_score">100</span> points </p>
+      <p id="change_score"></p>
+    </div>
+
+    <p class="stim" id="prompt"></p>
+    <p class="option stim" id="bet">BET</p>
+    <p class="option stim" id="pass">PASS</p>
+    <img class="stim" id="hand" alt="" src="imgs/hand.png"/>
+
+  </body>
+</html>

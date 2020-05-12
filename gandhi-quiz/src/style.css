@@ -1,0 +1,140 @@
+                    
+body {
+    /* overflow-y: hidden; */
+    text-align:center !important;
+    font-size: 17pt !important;
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+}
+
+button {
+    font-size: 1em !important;
+    margin: 0 auto;
+}
+
+.response-btn{
+    display: inline;
+    max-width: 70vw;
+}
+    
+
+legend {
+    font-size: 2em !important;
+}
+
+fieldset {
+    margin: 0 auto;    
+}
+
+.box {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    /* margin-top: 40px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+    border-radius: 20px;
+    display: table;
+}
+
+/* .inner_box { */
+/*     padding-top: 10px; */
+/* } */
+
+#bottom {
+    min-height: 100px !important;
+}
+
+.error-btn {
+    background-color: red !important;
+    color: white !important;
+}
+.correct-btn {
+    background-color: green !important;
+    color: white !important;
+}
+.tick {
+    font-size: 1.5em;
+    color: green;
+    position: absolute;
+    right: 5%;
+    top: 0.2em;    
+}
+.cross {
+    font-size: 1.5em;
+    color: red;
+    position: absolute;
+    right: 5%;
+    top: 0.2em;    
+}
+
+label {
+    text-align: center !important;
+}
+
+.ui-btn {
+    /* background-color: #dedede !important; */
+    /* border-color: #999999 !important; */
+}
+
+#gandhi-fb{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 1.5em;
+    font-weight: 400;    
+}
+
+#enter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+}
+
+#choice, #confidence {
+    display: block;
+}
+
+#loader {
+    display: none;
+    position: absolute;
+    width: 20vw;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+#header {
+    height: 3em;
+}
+#home {
+    /* display: none; */
+    font-size: .8em;
+}
+
+.choiceField .ui-btn-inner {
+    width: 49% !important;
+    height: 25vw !important;
+}
+
+#big-question-text {
+    padding-top: 15vh;
+}
+.big-question-legend legend  {
+    height: 40vh;
+}
+
+
+#progress {
+    display: none;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    background-color: #009245;
+    margin: 0 auto;
+    /* margin-top: 40px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <style>
+      body {
+        text-align: left;
+        display: inline;
+        font-size: 16pt;
+      }
+      p {
+        text-align: left;
+      }
+      .instructions{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60vw;
+        min-width: 200pt;
+      }
+      #end-p{
+        margin-top: 1em;
+        margin-bottom: 5em;
+        /* text-align: center; */
+      }
+      /* .consent-item{
+         justify-content: space-between;
+         display: flex;
+         } */
+      tr td:first-child {
+        display: block;
+        max-width: 66%;
+      }
+      .form-group {
+        justify-content: space-between;
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="instructions">
+      <h1>Study Title</h1>
+      <h2>Study Information</h2>
+
+      <p>
+        The data collected during this HIT will be used as part of research at the <b>XXXX</b> by <b>XXXX</b>. As
+        a participants in this research, it is important you
+        understand what you they are involved in, and consent fully to
+        your data being recorded. You should only participate if you
+        want to; choosing not to take part will not disadvantage you
+        in any way. Before you decide whether you want to take part,
+        it is important for you to read the following information
+        carefully. If you have any questions about this research,
+        please contact the researchers, at e.travers@ucl.ac.uk.
+      </p>
+
+      <p>
+        This HIT consists of an 10-15 minute online game.
+        We will record and analyse your choices in this game, as well as your Mechanical Turk user ID,
+        to ensure you receive payment for this HIT, and your answers to a few other demographic questions, on the page below.
+      </p>
+      <p>
+        The game runs for under 15 minutes. After completing the
+        game, you will be paid $2, plus a bonus based on how many
+        points you have scored.
+      </p>
+
+
+      <h2>Demographic Questionnaire</h2>
+      <!-- <form action="demographics.php" method="post"> -->
+      <!-- Skip the logging and go straight to instructions -->
+      <form action="instructions.html" method="post">
+              <div class="form-group">
+          <label>Age</label>
+          <div>          <input type="number" class="form-control" name="age" placeholder="Your age">          </div>
+        </div>
+        <div class="form-group">
+          <label>Current country</label>
+          <div>
+            <input type="text" class="form-control" name="country"
+                   placeholder="e.g. USA, Canada">
+          </div>
+        </div>
+        <div class="form-group">
+          <label >Gender</label>
+          <div>
+            <select name="gender" class="form-control" id="form_gender">
+              <option>Please select...</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other/Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+        <input style="display:none;" name="subject_nr" type="text" value="" id="subject_nr"/>
+
+        <h2>Study Consent</h2>
+        <p>Please answer the following questions before you begin:</p>
+
+        <table>
+          <tr>
+            <td>Have you read the above information about this study?</td>
+            <td>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary active"> <input type="radio" name="c1r" id="c1rN" autocomplete="off" checked> No </label>
+                <label class="btn btn-primary crY">    <input type="radio" name="c1r" id="c1rY" autocomplete="off"> Yes </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Have you received enough information about this study?</td>
+            <td>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary active"> <input type="radio" name="c2r" id="c2rN" autocomplete="off" checked> No </label>
+                <label class="btn btn-primary crY">    <input type="radio" name="c2r" id="c2rY" autocomplete="off"> Yes </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> Are you aware that you may withdraw from this study, at any time, and without giving any reason?</td>
+            <td>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary active"> <input type="radio" name="c3r" id="c3rN" autocomplete="off" checked> No </label>
+                <label class="btn btn-primary crY">    <input type="radio" name="c3r" id="c3rY" autocomplete="off"> Yes </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Do you agree to take part in this study?</td>
+            <td>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary active"> <input type="radio" name="c4r" id="c4rN" autocomplete="off" checked> No </label>
+                <label class="btn btn-primary crY">    <input type="radio" name="c4r" id="c4rY" autocomplete="off"> Yes </label>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <p id="end-p">
+          <input class="btn btn-success" type="submit" value="Continue" id="submitBtn" disabled="true"/>
+        </p>
+
+      </form>
+
+    </div>
+    <script>
+      $(document).ready(function() {
+        subject_nr = Math.round(Math.random()*1000000000);
+        localStorage['subject_nr'] = subject_nr;
+        document.getElementById('subject_nr').value = subject_nr;
+        $('#submitBtn').addClass('btn-warning')
+
+        $(".crY").prop('checked', false);
+        $("#submitBtn").attr("disabled", "disabled");
+
+        function checkAllYes(){
+          var checks = $('.crY').get().map(x => $(x).hasClass('active'));
+          var all = _.mean(checks) == 1;
+          console.log(checks);
+          if(all){
+            $('input[type="submit"]').prop('disabled', false);
+            $('#submitBtn').removeClass('btn-warning')
+            console.log('All yes');
+          } else {
+            $('input[type="submit"]').prop('disabled', true);
+            $('#submitBtn').addClass('btn-warning')
+            console.log('Not all yes');
+          }
+        }
+        /* $('input[type=radio]').click(checkAllYes);*/
+        $('label.btn').click(function(){setTimeout(checkAllYes, 20)});
+      });
+    </script>
+  </body>
+</html>

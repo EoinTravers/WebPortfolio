@@ -1,0 +1,140 @@
+body {
+    font-size: 12pt;
+}
+
+p, h1, h2, h3, h4 {
+    text-align: center;
+}
+
+body{
+    background: GhostWhite;
+}
+
+.text_column{
+    font-size:30px;
+    display: Inline;
+    margin-right:500px;
+}
+
+#loadingGif {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+#loaded {
+    display: none;
+}
+#boxed {
+    border: solid 1px #CCCCCC;
+    background-color: white;
+    position: absolute;
+    text-align:center;
+    width:120vh;
+    height: 90vh;
+    top: 5vh;
+    /* left: 5vh; */
+}
+
+button{
+    z-index: 50;
+}
+.response {
+    position: absolute;
+    width: 20vh;
+    height: 14vh;
+    white-space: normal;
+}
+.response-text{
+    font-size: 3vh;
+}
+#response1 {
+    left: 1vh;
+    top: 1vh;
+}
+#response2 {
+    right: 1vh;
+    top: 1vh;
+}
+#probeBox{
+    /* font-size: 3em; */
+    /* position: relative; */
+    position: absolute;
+    top: 40%;
+    left: 60vh;
+    transform: translateX(-50%);
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* left: 0; */
+    /* right: 0;     */
+}
+#theProbe{
+    font-size: 3em;
+    /* text-align: center; */
+    /* position: relative; */
+    /* top: 40%; */
+    max-width: 90vh;
+    visibility: hidden;
+    /* transform: translateX(25%); */
+    /* transform: translateY(-50%); */
+}
+
+#start {
+    font-size: 4vh;
+    position: absolute;
+    left: 60vh;
+    bottom: 5vh;
+    transform: translateX(-50%);
+    width: 20vh;
+    height: 14vh;
+    white-space: normal
+}
+
+.stim-text{
+    font-size: 4vh;
+    position: absolute;
+    width: 90vh;
+    left: 60vh;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+
+#baserate-text {
+    top: 40vh;
+}
+
+#group-text {
+    top: 5vh;
+}
+
+#description-text {
+    top: 25vh;
+}
+
+
+#prompt-text {
+    top: 40vh;
+}
+
+#probe-text {
+    top: 60vh;
+}
+
+
+#catch-header {
+    display: none;
+    font-size: 8vh;
+}
+
+.dot {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#n1, #n2, #g1, #g2 {
+    font-weight: bold;
+}

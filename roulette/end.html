@@ -1,0 +1,70 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="static/libs.js"></script>
+  <script>
+
+
+    var code, subject_nr
+    $( document ).ready(function(){
+      subject_nr = localStorage['subject_nr'];
+      code;
+      $.ajax({
+        'type': 'POST',
+        'url': './code.php',
+        'data': JSON.stringify({subject_nr:subject_nr}),
+        'success': function(res) {
+          code = res;
+          $('#code').html(code);
+        }
+      });
+      $('#score').html(localStorage['score']);
+    });
+
+  </script>
+
+  <style>
+    .instructions{
+      width: 40vw;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 20pt;
+      top: 10vh;
+      text-align: left;
+      justify-content: center;
+      font-size: 16pt;
+    }
+    code {
+      color: red;
+      font-size: 1.5em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="instructions">
+    <h1>Wheel of Chance</h1>
+    <p>That's it, thank you!</p>
+    <p>Your final score was <span id="score">__</span> points.</p>
+    <p>
+      Your task code is
+      <code id="code">________</code>.
+    </p>
+    <p>
+      To claim your payment and your bonus, please carefully copy and paste this code into the appropriate form on Mechanical Turk.
+    </p>
+    <p>
+      If you have any questions, please contact me, at e.travers@ucl.ac.uk.
+    </p>
+    <p>
+      Thank you for your time,<br>
+      Dr Eoin Travers,<br>
+      University College London
+    </p>
+
+  </div>
+
+</body>
+</html>

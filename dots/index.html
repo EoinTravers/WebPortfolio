@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="static/main.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <title>Experiment</title>
+    </head>    
+    <body>
+        <div id="instructions">
+            <h2>Visual Discrimination Task</h2>
+            <p>
+                In this task, you'll see a bunch of dots, floating
+                randomly around the middle of the screen. On each
+                trial, after a random period of time, the most of the
+                dots will start to move in the same direction. Your
+                task is to indicate whether these dots are moving to
+                the left, or to the right.
+            </p>
+            <p>
+                Once the dots begin to move, press <b>"f"</b> if you think they're moving to
+                the left, and <b>"j"</b> if you think they're moving to the right.
+                You'll recieve <span id="correct_points"></span> points if correct,
+                but lose <span id="incorrect_points"></span> points if you're wrong.
+                Please rest your left index finger over <b>"f"</b>
+                and your right index finger over <b>"j"</b> throughout the task.
+            </p>
+            <p>
+                The amount of time you have to wait for the dots to
+                start moving in the same direction varies from trial
+                to trial, and on some trials you'll have to wait a
+                very long time. Whenever you want, you can skip the current trial,
+                and start the next one, by pressing <b>"f"</b> and <b>"j"</b>
+                at the same time. You'll recieve <span id="skip_points"></span> points
+                every time you skip. Remember, you'll only be playing
+                for 15 minutes, so skipping the trials with long wait
+                times is a good way to win more points, and earn more
+                money.
+            </p>
+            <h4>
+                To begin, press <b>"f"</b> and <b>"j"</b>.
+            </h4>
+        </div>
+        <p id="fb"></p>
+        <p id="score">
+            Score: <span id="sc">0</span><br>
+            Time remaining: <span id="time">5:00</span>
+        </p>
+    </body>
+    <script src="static/libs.js"></script>
+    <script src="static/main.js"></script>
+</html>

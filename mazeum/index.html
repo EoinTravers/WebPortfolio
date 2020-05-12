@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="static/libs.js"></script>
+    <script src="static/main.js"></script>
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+
+    <div id="welcome-div" class="middle">
+      <!-- <h1>Mazeum</h1> -->
+      <img class="logo" alt="" src="imgs/logo.jpg"/>
+      <div class="form-group row">
+        <label class="col-6 col-form-label">Subject number:</label>
+        <div class="col-6">
+          <input class="form-control" type="number" id="subject-nr">
+        </div>
+      </div>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-primary"> <input name="subj-radio" type="radio" value="Active"> Active</label>
+        <label class="btn btn-primary"> <input name="subj-radio" type="radio" value="Passive"> Passive </label>
+        <label class="btn btn-primary"> <input name="subj-radio" type="radio" value="Headset"> Headset </label>
+      </div>
+    </div>
+
+    <img id="painting" alt="" src="imgs/maze.jpg"/>
+
+    <p id="question">A question about this picture?</p>
+
+    <div id="radio-div" class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-primary">
+        <input name="seen-radio" type="radio" id="radio1" value="Yes"> Yes </label>
+        <label class="btn btn-primary">
+          <input name="seen-radio" type="radio" id="radio2" value="No"> No </label>
+    </div>
+
+
+    <div id="slider"></div>
+
+    <canvas id="trace-map"></canvas>
+    <p id="low-question">Low question</p>
+
+    <div id="drag-wrapper">
+      <div id="drag-map-wrapper">
+        <img id="drag-map" alt="" src="" />
+        <div id="db1" class="dbox"></div>
+        <div id="db2" class="dbox"></div>
+        <div id="db3" class="dbox"></div>
+        <div id="db4" class="dbox"></div>
+        <div id="db5" class="dbox"></div>
+        <div id="db6" class="dbox"></div>
+        <div id="db7" class="dbox"></div>
+        <div id="db8" class="dbox"></div>
+        <div id="db9" class="dbox"></div>
+        <div id="db10" class="dbox"></div>
+        <div id="db11" class="dbox"></div>
+        <div id="db12" class="dbox"></div>
+      </div>
+      <div id="drag-source">
+        <img id="mini-painting" class="draggable" src="imgs/art01.jpg"/>
+      </div>
+    </div>
+
+    <form id="pick-favourite">
+      <p>Which of the paintings was is your favourite? </p>
+      <div id="pick-options" class="img-selector">
+      </div>
+    </form>
+
+    <div id="demographics" class="middle">
+      <h1>About you</h1>
+      <div class="form-group row">
+        <label class="col-6 col-form-label">Your age:</label>
+        <div class="col-6">
+          <input class="form-control" type="number" id="subject-age">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-6 col-form-label">Your gender:</label>
+        <div class="col-6">
+          <select id="subject-gender" class="custom-select">
+            <option value="p" selected>Pick one:</option>
+            <option value="m">Male</option>
+            <option value="f">Female </option>
+            <option value="o">Other/Prefer not to say</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-6 col-form-label">Your dominant hand:</label>
+        <div class="col-6">
+          <select id="subject-hand" class="custom-select">
+            <option value="p" selected>Pick one:</option>
+            <option value="l">Left-handed</option>
+            <option value="r">Right-handed </option>
+            <option value="a">Ambidextrous</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="end" class="middle">
+      <img class="logo" alt="" src="imgs/logo.jpg"/>
+      <h1>Thank you!</h1>
+      <a class="btn btn-primary" href="javascript:location.reload(true)" role="button">Restart</a>
+    </div>
+
+    <div class="btn btn-primary" id="submit">Submit</div>
+    <div class="btn btn-danger" id="reset">Reset</div>
+    <p id="progress">#1 of 15</p>
+
+    <div id="img-modal" class="modal">
+      <img class="modal-content" id="modal-img">
+      <div id="caption"></div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <script src="static/main.js"></script>
+    <script>
+      $( document ).ready(function(){
+        $( window ).resize(_.debounce(resize, 100));
+        $(document).mousemove(update_mouse);
+        globals.design = get_design();
+        resize();
+        Ready();
+      });
+    </script>
+  </head>
+  <body>
+
+    <div id="loading">
+      <img id="loadingGIF" alt="" src="imgs/loading.gif"/>
+    </div>
+    <div id="loaded">
+      <div id="boxed">
+        <button id="response1" type="button" class="btn btn-primary response"
+                data-id="1" data-response="yes" src="imgs/yes.png">
+          <span id="response-text1" class="response-text">X</span>
+        </button>
+        <button id="response2" type="button" class="btn btn-primary response"
+                data-id="2" data-response="no" src="imgs/no.png">
+          <span id="response-text2" class="response-text">X</span>
+        </button>
+
+        <h1 class="stim-text" id="catch-header">
+          Catch Item!
+        </h1>
+        <p class="stim-text" id="group-text">
+          Pool:<br>
+          <span id="g1a">X</span><br>
+          <span id="g2a">Y</span>
+        </p>
+        <p class="stim-text" id="baserate-text">
+          The pool consists of:<br>
+          <span id="n1">X</span> <span id="g1b">X</span><br>
+          <span id="n2">Y</span> <span id="g2b">Y</span>
+        </p>
+        <p class="stim-text" id="description-text">Description</p>
+        <p class="stim-text" id="probe-text">xxx</p>
+        <p class="stim-text" id="prompt-text"></p>
+
+        <button type="button" class="btn btn-primary " id="start">Go</button>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="timeout-modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="modalLongTitle">Too slow!</h3>
+          </div>
+          <div class="modal-body">
+            Please try to respond within 5 seconds
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <script src="/socket.io/socket.io.js"></script>         -->
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <script src="static/main.js"></script>
+  </head>
+  <body>
+
+    <p id="clock"></p>
+    <div id="stimulus-wrapper">
+      <!-- <souffle id="stimulus-main"></souffle> -->
+      <wrapper>
+        <souffle-core></souffle-core>
+        <img src="static/oven.jpg" id="oven" />
+        <img src="static/souffle.jpg" id="souffle" />
+      </wrapper>
+    </div>
+    <p id="fix">+</p>
+
+    <div class="stim" id="score">
+      <p> <span id="current-score">0</span> points </p>
+    </div>
+
+    <p class="stim" id="prompt"></p>
+  </body>
+</html>

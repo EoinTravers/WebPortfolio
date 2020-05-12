@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <script src="/socket.io/socket.io.js"></script>         -->
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <script src="static/main.js"></script>
+  </head>
+  <body>
+
+    <div id="stimulus-wrapper">
+      <!-- <flower id="stimulus-main"></flower> -->
+      <wrapper>
+        <flower-core></flower-core>
+        <img src="static/seed.svg" id="seed" />
+        <img src="static/flowerA_0.png" id="flower" />
+      </wrapper>
+    </div>
+    <p id="fix">+</p>
+
+    <div class="stim" id="score">
+      <p> <span id="current-score">0</span> points </p>
+    </div>
+
+    <p class="stim" id="prompt"></p>
+  </body>
+</html>

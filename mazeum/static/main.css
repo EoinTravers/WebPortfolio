@@ -1,0 +1,344 @@
+body {
+    overflow-y: hidden;
+    font-size: 14pt;
+    text-align: center;
+    display: none;              /*Until activated*/
+}
+
+p, h1, h2, h3, h4 {
+    text-align: center;
+}
+.logo {
+    height: 3em;
+}
+#progress{
+    position: absolute;
+    left: 1pt;
+    top: 1pt;
+    border: 4pt solid black;
+    padding: 4pt;
+}
+#painting{
+    position: absolute;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+}
+#painting{
+    max-height: 50vh;
+    max-width: 90vw;
+    top: 3em;
+}
+#question, #low-question{
+    text-align: center;
+    font-size: 1.5em;
+    width: 100vw;
+}
+#question { margin-top: 60vh; }
+#low-question{
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+}
+
+#submit {
+    position: absolute;
+    left: 50vw;
+    bottom: 2em;
+    transform: translate(-50%, 0%);
+}
+#reset {
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+
+#museum {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+#museum{
+    height: 50vh;
+}
+
+
+/* #trace-map, #drag-map{ */
+#trace-map{
+    position: absolute;
+    width: 90vw;
+    height: 129vw;    /* 736 x 1056  aspect ratio (70%)*/
+    max-width: 48vh;
+    max-height: 70vh;
+    left: 5vw;
+    top: .5em;
+    color: black;
+    border: solid;
+}
+
+.middle{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    width: 90vw;
+    transform: translate(-50%, -50%);
+}
+
+#slider{
+    width: 90vw;
+    margin-left: 5vw;
+}
+
+
+
+#drag-wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+#drag-map-wrapper{
+    position: absolute;
+    width: 90vw;
+    height: 129vw;    /* 736 x 1056  aspect ratio (70%)*/
+    max-width: 48vh;
+    max-height: 70vh;
+    left: 5vw;
+    top: .5em;
+    color: black;
+    /* border: solid; */
+}
+#drag-map{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+}
+#drag-source {
+    width: 20vw;
+    height: 14vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#mini-painting {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dbox{
+    position: absolute;
+    background-color: grey;
+}
+
+.map1#db1 { left: 0.991%; top: 72.017%; }
+.map1#db2 { left: 22.838%; top: 65.2%; }
+.map1#db3 { left: 44.485%; top: 72.017%; }
+.map1#db4 { left: 0.991%; top: 49.218%; }
+.map1#db5 { left: 22.838%; top: 43.6%; }
+.map1#db6 { left: 44.485%; top: 50.818%; }
+.map1#db7 { left: 0.991%; top: 29.260%; }
+.map1#db8 { left: 22.838%; top: 22.25%; }
+.map1#db9 { left: 44.485%; top: 29.619%; }
+.map1#db10 { left: 0.991%; top: 8.420%; }
+.map1#db11 { left: 22.838%; top: 0.5%; }
+.map1#db12 { left: 44.485%; top: 9%; }
+.map1.dbox{
+    width: 20%;
+    height: 6.51%;
+}
+
+.map2#db1 { left: 33.893%; top: 64.612%; }
+.map2#db2 { left: 43.188%; top: 78.166%; }
+.map2#db3 { left: 33.893%; top: 92.162%; }
+.map2#db4 { left: 66.606%; top: 64.612%; }
+.map2#db5 { left: 81.7%; top: 78.166%; }
+.map2#db6 { left: 66.606%; top: 92.162%; }
+.map2#db7 { left: 44.651%; top: 49.356%; }
+.map2#db8 { left: 63.275%; top: 40%; }
+.map2#db9 { left: 81.7%; top: 49.440%; }
+.map2#db10 { left: 44.651%; top: 25.078%; }
+.map2#db11 { left: 63.448%; top: 15.8%; }
+.map2#db12 { left: 81.7%; top: 25.078%; }
+.map2.dbox{
+    width: 16.9%;
+    height: 7.4%
+}
+
+.map3#db1 { left: 44.649%; top: 71.664%; }
+.map3#db2 { left: 71.870%; top: 82.785%; }
+.map3#db3 { left: 45.373%; top: 93.741%; }
+.map3#db4 { left: 11.028%; top: 57.954%; }
+.map3#db5 { left: 44.649%; top: 52.081%; }
+.map3#db6 { left: 71.729%; top: 59.170%; }
+.map3#db7 { left: 11.028%; top: 40.306%; }
+.map3#db8 { left: 44.721%; top: 32.450%; }
+.map3#db9 { left: 71.729%; top: 39.438%; }
+.map3#db10 { left: 11.028%; top: 19.795%; }
+.map3#db11 { left: 44.649%; top: 12.712%; }
+.map3#db12 { left: 71.729%; top: 19.779%; }
+.map3.dbox{
+    width: 27.7%;
+    height: 5.9%
+}
+
+.map4#db1 { left: 0.487%; top: 66.777%; }
+.map4#db2 { left: 32.130%; top: 66.777%; }
+.map4#db3 { left: 16.926%; top: 55.991%; }
+.map4#db4 { left: 0.487%; top: 39.241%; }
+.map4#db5 { left: 16.926%; top: 28.478%; }
+.map4#db6 { left: 32.130%; top: 39.241%; }
+.map4#db7 { left: 0.487%; top: 12.122%; }
+.map4#db8 { left: 16.926%; top: 0.686%; }
+.map4#db9 { left: 32.130%; top: 12.122%; }
+.map4#db10 { left: 57.047%; top: 0.774%; }
+.map4#db11 { left: 64.835%; top: 14.233%; }
+.map4#db12 { left: 57.020%; top: 31.449%; }
+.map4.dbox{
+    width: 14.4%;
+    height: 8.3%;
+}
+
+.img-selector input{
+    margin:0;
+    padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.img-selector-2 input:active +.fav-cc, .img-selector input:active +.fav-cc{opacity: .9;}
+.img-selector-2 input:checked +.fav-cc, .img-selector input:checked +.fav-cc{
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+    border: 5pt solid red !important;
+}
+
+.fav-cc{
+    width: 29vw;
+    height: 18vw;
+    padding: 1vw 1vw 1vw 1vw;
+    cursor: pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    /* -webkit-transition: all 100ms ease-in; */
+    /* -moz-transition: all 100ms ease-in; */
+    /* transition: all 100ms ease-in; */
+    /* -webkit-filter: brightness(1.8) grayscale(1) opacity(.7); */
+    /* -moz-filter: brightness(1.8) grayscale(1) opacity(.7); */
+    /* filter: brightness(1.8) grayscale(1) opacity(.7); */
+}
+.fav-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+/* a{color:#444;text-decoration:none;} */
+/* p{margin-bottom:.3em;} */
+/* * { font-family:monospace; } */
+/* .img-selector-2 input{ margin: 5px 0 0 12px; } */
+/* .img-selector-2 label{ margin-left: 7px; } */
+/* span.cc{ color:#6d84b4 } */
+
+.fb-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* Modal stuff */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+.modal-backdrop {
+    z-index: -1040 !important;
+}
+/* .modal-dialog { */
+/*     margin: 2px auto; */
+/*     z-index: 1100 !important; */
+/* } */
+
+.correct { border: solid 2pt green; }
+.incorrect { border: solid 2pt red; }

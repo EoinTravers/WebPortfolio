@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <style>
+      body {
+        text-align: left;
+        display: inline;
+        font-size: 16pt;
+      }
+      p {
+        text-align: left;
+      }
+      .instructions{
+        /* width: 50vw; */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60vw;
+        min-width: 200pt;
+      }
+      .btn {
+        font-size: 2em;
+      }
+
+      #test, #failed {
+        display: none;
+      }
+
+      #how-long-div{
+        width: 40vw;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 6pt;
+      }
+      #how-long{
+        width:10vw;
+      }
+      img {
+        max-width: 10em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Instructions</h1>
+    <div class="instructions" id="instructions">
+      <p>
+        This game will last for exactly 15 minutes.
+        Here's how it works.
+      </p>
+      <p>
+        You're a baker: your job is to bake soufflés.
+      </p>
+      <img alt="" src="static/souffle.jpg"/>
+      <p>
+        Each round begins with the dough going into the oven.<br>
+        Your task is to decide how long to let it bake before opening the oven and taking it out.
+      </p>
+      <img alt="" src="static/oven.jpg"/>
+      <p>
+        Here's the catch: if you take a soufflé out of the oven before
+        it's ready, it won't have risen, and you'll have to throw it
+        out and start again.
+      </p>
+      <img alt="" src="static/flat_souffle.jpg"/>
+      <p>
+        You'll be using three different ovens, red, blue, and green, with different settings.
+        In some ovens the soufflés will be ready quickly, while in others they will take longer.
+        Some ovens are also more consistent than others.
+      </p>
+      <img alt="" src="static/oven_red.jpg"/>
+      <img alt="" src="static/oven_blue.jpg"/>
+      <img alt="" src="static/oven_green.jpg"/>
+      <p>
+        You'll need to figure out, through trial and error, how long to leave the soufflés in each oven.
+      </p>
+      <p>
+        Your goal is to score as many points as you can in 15 minutes.
+        You get 10 points for every succesful soufflé you bake.
+        If you take one out of the oven too soon, you don't get any points, and you move on to the next soufflé.
+        In this game, <b>soufflés don't burn</b>. This means that if
+        you leave them in the oven too long, you won't lose any
+        points, but you will have wasted some time.
+      </p>
+      <p>
+        Try to strike a balance between opening the oven too soon,
+        and not getting any points,
+        and waiting too long so that you don't have time to bake as many soufflés.
+      </p>
+      <p>
+        At the end of the game, the points you've won will be
+        converted to cash, and added to your Mechanical Turk payment.
+        You'll receive 1 cent for every 10 points.
+      </p>
+      <p>
+        Once you're ready to begin, please click the button below to begin the game.
+        Please note that the game cannot be paused once it begins.
+      </p>
+
+      <p style="text-align:center;">
+        <a class="btn btn-primary" href="./experiment.html" role="button" id="start-btn">Start</a>
+      </p>
+    </div>
+    <!--
+         <div class="instructions" id="test">
+         Before you start, it's important that you know how long the game will run for.
+         In the box below, please type the number of minutes this game will last.
+         <div id="how-long-div">
+         <input class="" type="number" value="" id="how-long"> minutes.
+         </div>
+         <p style="text-align:center;">
+         <a id="how-long-submit" class="btn btn-primary" href="#" role="button">Submit</a>
+         </p>
+         </div>
+
+         <div class="instructions" id="failed">
+         Oh no, that's not right.
+         Please click the button below to read the instructions again before you begin.
+         <p style="text-align:center;">
+         <a id="how-long-restart" class="btn btn-primary" href="#" role="button">See Instructions</a>
+         </p>
+         </div> -->
+
+  </body>
+  <script>
+    /* $('#start-btn').click(function(e){
+     *   $('#instructions').hide();
+     *   $('#test').show();
+     * });
+
+     * $('#how-long-submit').click(function(e){
+     *   var v = $('#how-long').val();
+     *   if(v == "20"){
+     *     window.location.replace("./experiment.html");
+     *   } else {
+     *     $('#test').hide();
+     *     $('#failed').show();
+     *   }
+     * })
+
+     * $('#how-long-restart').click(function(e){
+     *   $('#failed').hide();
+     *   $('#instructions').show();
+     *   $('#how-long').val("");
+     * }) */
+
+  </script>
+</html>

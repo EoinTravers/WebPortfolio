@@ -1,0 +1,59 @@
+body {
+    text-align: center;
+}
+
+p, h1, h2, h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+#info-div{
+    height: 30vh;
+}
+.screen{
+    height: 70vh;
+}
+
+#run-btn {
+    display: none;
+}
+#enter-btn{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider {
+    /* height: 30px; */
+    width: 50vw !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* transform: scale(2); */
+}
+.slider-tick-label {
+    font-size: 2em;
+}
+#enter-btn {
+    font-size: 2em;
+}
+
+.jumbotron {
+    width:  17vw !important;
+    height: 13vh !important;
+    font-size: 2em;
+}
+.slider-label {
+    font-size: 2em;
+}
+.slider-track, .slider-selection {
+    background: black;
+}
+/* .slider { */
+/*     display: none; */
+/* } */
+
+/* .hidden { */
+/*     transform: translateY(+100vh); */
+/* } */
+/* .shown { */
+/*     transform: translateY(+0vh); */
+/* } */

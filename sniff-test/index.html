@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Self-Impressions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Load javascript and css libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    <link href="lib/bootstrap-slider.css" rel="stylesheet"/>
+    <!-- My codes -->
+    <script src="logic.js"></script>
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+
+    <div id="info-div">
+      <!-- This sits on the top of the page -->
+      <h1>Sniff Test</h1>
+      <h3>
+        Participant #<span id="subject-id">0</span> &bull;
+        Odour set: <span id="set-id">?</span> &bull;
+        Perfume: #<span class="perfume-id">?</span>
+      </h3>
+    </div>
+
+    <div id="stimuli-div" class="screen">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default jumbotron">
+          <input type="radio" name="which-run" response="A" autocomplete="off">
+          Run A
+        </label>
+        <label class="btn btn-default jumbotron">
+          <input type="radio" name="which-run" response="B" autocomplete="off">
+          Run B
+        </label>
+      </div>
+      <br>
+      <button class="btn btn-success jumbotron" id="run-btn">
+        Start
+      </button>
+    </div>
+
+    <div id="prompt-div" class="screen">
+      <h3>
+        Have a smell of perfume #<span class="perfume-id"></span>,
+        and press start when you're ready to give your ratings.
+      </h3>
+      <button class="btn btn-success jumbotron" id="start-btn">Start</button>
+    </div>
+
+    <div id="response-div" class="screen">
+      <!-- Slider for entering responses -->
+      <h2 id="response-prompt">Is it...</h2>
+      <p>
+        <span class="slider-label" id="lab1">LABEL1</span>
+        <input id="response-slider" class='slider' type="text" name="response-slider"
+               data-provide="slider" data-slider-min="1" data-slider-max="100"
+               data-slider-step="1" data-slider-value="50" data-slider-tooltip="hide" >
+        <span class="slider-label" id="lab2">LABEL2</span>
+      </p>
+      <br><button id="enter-btn" class="btn btn-primary">Enter</button>
+    </div>
+
+    <div id="end-div" class="screen">
+      <h1>That's it!</h1>
+      <h2>Thank you!</h2>
+      <label onClick="window.location.reload()"
+             class="btn btn-default jumbotron">
+        CLOSE
+      </label>
+    </div>
+
+  </body>
+</html>

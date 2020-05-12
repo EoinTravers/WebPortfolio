@@ -1,0 +1,45 @@
+body {
+    font-size: 12pt;
+    display: none;              /*Until activated*/
+}
+
+p, h1, h2, h3, h4 {
+    text-align: center;
+}
+#info{
+    top: 5vh;
+    left: 50vw;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 4em;
+}
+#stimulus, #fix, #prompt, #feedback, #reminder{
+    top: 50vh;
+    left: 50vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+#stimulus, #fix{
+    font-family: "Lucida Console", Monaco, monospace;
+}
+#fix  {
+    font-size: 4em;
+}
+#stimulus {
+    font-size: 8em;
+    transition: linear .5s;
+}
+#prompt{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 3em;
+}
+#feedback {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 8em;
+}
+#reminder {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 2em;
+    top: 90vh;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <style>
+      body {
+        color: white;
+        text-align: left;
+        display: inline;
+        font-size: 16pt;
+      }
+      p {
+        text-align: left;
+      }
+      .instructions, .notes{
+        /* width: 50vw; */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60vw;
+        min-width: 200pt;
+      }
+      .btn {
+        font-size: 2em;
+      }
+
+      #test, #failed {
+        display: none;
+      }
+
+      #how-long-div{
+        width: 40vw;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 6pt;
+      }
+      #how-long{
+        width:10vw;
+      }
+      img {
+        max-height: 10em;
+      }
+      .instructions p:nth-of-type(odd){
+        color: black;
+      }
+      .notes {
+        color: black;
+        font-weight: bold;
+      }
+      #white-resp, #black-resp{
+        font-weight: bold;
+      }
+      .eq {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="instructions" id="instructions">
+      <h1>Instructions</h1>
+      <p>
+        This task will last for exactly 10 minutes.
+        Here's how it works.
+      </p>
+      <p>
+        On each round, you'll see a sequence of boards, made up of black, white, and grey squares.
+      </p>
+      <img alt="" src="static/imgs/procedure.png"/>
+      <p>
+        On some rounds, you are more likely to see black squares than white squares.
+        On others, you are more likely to white squares than black.
+        Your task is to decide black or white squares are more common on each round.
+        For each round you get right, you win 2c.
+        For each round you get wrong, you lose 1c.
+      </p>
+      <p>
+        You can wait as long as you like before making your new decision on each round.
+        Every 2 seconds, a new board will be shown,
+        so the longer you wait the more information you will have in order to decide.
+        However, the task will end after ten minutes,
+        so if you spend too long on each round you won't be able to win very much money.
+        It's up to you to decide how long to wait on each round
+        before making your decision.
+      </p>
+      <p>
+        Sometimes, it will be clear that there are more black or white squares.
+        Other times, they will be quite evenly matched,
+        and the decision will be more difficult.
+      </p>
+      <p>
+        You give your response using the keyboard.
+        If you think the squares are mostly black,
+        press the <span id="white-resp">F</span> key.
+        If you think the they are mostly white,
+        press the <span id="black-resp">J</span> key.
+      </p>
+      <p>
+        Finally, after you make your decision on each round,
+        you'll be asked how confident you are, on a scale of 1 to 9,
+        that your response was correct.
+        You can give your response here by pressing the number keys
+        at the top of the keyboard, 1 to 9.
+      </p>
+      <p>
+        That's it! If you're ready, please click the Start button below to begin.
+        Please note that you can't pause the task once it starts.
+      </p>
+      <p>
+        Thank you!
+      </p>
+      <p style="text-align:center;">
+        <a class="btn btn-primary" href="./experiment.html" role="button" id="start-btn">Start</a>
+      </p>
+    </div>
+
+  </body>
+  <script>
+
+  </script>
+</html>

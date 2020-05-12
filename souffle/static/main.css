@@ -1,0 +1,144 @@
+body {
+    font-size: 12pt;
+    display: none;              /*Until activated*/
+}
+
+p, h1, h2, h3, h4 {
+    text-align: center;
+}
+
+#score{
+    font-size: 3em;
+}
+
+
+#clock {
+    font-family: 'digital7';
+    font-size: 3em;
+}
+
+#fix {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 6vh;
+}
+
+#stimulus-wrapper{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    width:  40vh;
+    height: 40vh;
+    transform: translate(-50%, -50%);
+}
+
+
+#oven {
+    position: absolute;
+    /* width: 40%; */
+    top: 10%;
+    left: 10%;
+    width:  80%;
+    height: 80%;
+    transition: .5s ease-in;
+    /* transition: 1s cubic-bezier(0.895, 0.03, 0.685, 0.22); */
+}
+
+#souffle{
+    /* z-index: -5; */
+    position: absolute;
+    /* width: 40%; */
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    /* transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);; */
+    transition: .5s ease-in;
+}
+
+#prompt{
+    position: absolute;
+    bottom: 5vh;
+    width: 60vw;
+    left: 20vw;
+    font-size: 2em;
+    /* font-size: 16pt; */
+}
+
+/* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) { */
+/*     #prompt { */
+/*         width: 100vw; */
+/*         left: 0vh; */
+/*     } */
+/* } */
+
+.spinning {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinning_slow {
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+
+.wobbling {
+  animation-name: wobble;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.wobbling_slow {
+  animation-name: wobble;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-moz-keyframes wobble {
+    0% { -moz-transform: rotate(0deg); }
+    25% { -moz-transform: rotate(15deg); }
+    50% { -moz-transform: rotate(0deg); }
+    75% { -moz-transform: rotate(-15deg); }
+}
+@-webkit-keyframes wobble {
+    0% { -webkit-transform: rotate(0deg); }
+    25% { -webkit-transform: rotate(15deg); }
+    50% { -webkit-transform: rotate(0deg); }
+    75% { -webkit-transform: rotate(-15deg); }
+}
+@keyframes wobble {
+    0%  { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+}
+
+
+
+@font-face{
+    font-family: 'digital7';
+    src: url('digital7.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('digital7.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}

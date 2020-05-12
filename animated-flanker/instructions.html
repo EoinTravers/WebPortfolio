@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="static/libs.css" rel="stylesheet"/>
+    <link href="static/main.css" rel="stylesheet"/>
+    <script src="static/libs.js"></script>
+    <style>
+      body {
+        text-align: left;
+        display: inline;
+        font-size: 16pt;
+      }
+      p {
+        text-align: left;
+      }
+      .instructions{
+        /* width: 50vw; */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60vw;
+        min-width: 200pt;
+      }
+      .btn {
+        font-size: 2em;
+      }
+      img {
+        max-width: 8em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #test, #failed {
+        display: none;
+        top: 50vh;
+        left: 50vw;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+      #q-div{
+        width: 40vw;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 6pt;
+      }
+      #q{
+        width:10vw;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="instructions" id="instructions">
+      <h1>Instructions</h1>
+      <p>
+        Put your instructions here.
+      </p>
+      <p>
+        It's a good idea to break these up into short paragraphcs.
+        Images don't hurt either.
+      </p>
+      <img style="border-radius:10%;" alt="" src="static/puppy.jpeg"/>
+      <p>
+        I'll leave the rest up to you.
+      </p>
+      <p>Click Start to begin!</p>
+
+      <!-- Use this version to skip the test question -->
+      <!-- <p style="text-align:center;">
+           <a class="btn btn-primary" href="./experiment.html" role="button" id="start-btn">Start</a>
+           </p>
+      -->
+
+      <p style="text-align:center;">
+        <a class="btn btn-primary" href="#" role="button" id="start-btn">Start</a>
+      </p>
+
+    </div>
+
+    <div class="instructions" id="test">
+      You might want to make sure people have ready your instructions.
+      Here, I've made it so that people can't start the experiment without first writing the word "Umbrella" (case-sensitive) in the box below.
+      Use this to ask a question about the instructions.
+      <div id="q-div">
+        <input class="" type="text" value="" id="q">
+      </div>
+      <p style="text-align:center;">
+        <a id="q-submit" class="btn btn-primary" href="#" role="button">Submit</a>
+      </p>
+    </div>
+
+    <div class="instructions" id="failed">
+      Oh no, that's not right.
+      Please click the button below to read the instructions again before you begin.
+      <p style="text-align:center;">
+        <a id="q-restart" class="btn btn-primary" href="#" role="button">See Instructions</a>
+      </p>
+    </div>
+
+  </body>
+  <script>
+    $('#start-btn').click(function(e){
+      $('#instructions').hide();
+      $('#test').show();
+    });
+
+    $('#q-submit').click(function(e){
+      var v = $('#q').val();
+      if(v == "Umbrella"){
+        window.location.replace("./experiment.html");
+      } else {
+        $('#test').hide();
+        $('#failed').show();
+      }
+    })
+
+    $('#q-restart').click(function(e){
+      $('#failed').hide();
+      $('#instructions').show();
+      $('#how-long').val("");
+    })
+
+  </script>
+</html>

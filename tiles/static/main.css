@@ -1,0 +1,53 @@
+
+body {
+
+    background-color: grey;
+}
+
+#stimuli{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border: solid black 2pt;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.screenshotable{
+    position: relative !important;
+    left: 25vw !important;
+    top: 25vh !important;
+    transform: translate(0,0) !important;
+}
+
+
+.square{
+    border: solid rgb(0, 126, 255) 1pt;
+    width: 12.5%;
+    height: 12.5%;
+    /* position: absolute; */
+}
+
+#prompt {
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    text-align: center;
+    position: absolute;
+    display: none;
+}
+
+#reminder {
+    left: 50vw;
+    bottom: 0vh;
+    transform: translate(-50%);
+    font-size: 2em;
+    text-align: center;
+    position: absolute;
+}

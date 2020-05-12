@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <!-- <meta http-equiv="Content-Type" content="text-html" charset=utf-8"/> -->
+        <meta charset="UTF-8"> 
+	<title>Gandhi Day</title>      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">   
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link href="static/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>        
+        <link href="static/main.css" rel="stylesheet"/>        
+        <link href="static/india.css" rel="stylesheet"/>        
+    </head>
+    <body>
+        <div id="page" data-role="page">
+	    <div id="header" data-role="header">
+                <a id="home"
+                   data-role="button"
+                   class="ui-btn-right">Menu</a>
+		<h1 id="title">Gandhi Day</h1>
+	    </div>
+            <img id="loader" alt="" src="imgs/load.gif"/>
+
+	    <div data-role="content" id="content"></div>
+	    <div data-role="content" id="progress"></div>
+            <div data-role="panel" id="menupanel"
+                 data-position="right" data-display="overlay">
+
+		<h1 id="title">Menu</h1>
+                <button id="menuHome">Home</button>
+                <button id="menuFS">Full screen</button>
+                <button id="menuResume">Resume</button>
+            </div><!-- /panel -->
+
+    </body> 
+    <script type="text/javascript" src="static/libs.js"></script>
+    <script type="text/javascript" src="static/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="static/main.js"></script>
+</html>
